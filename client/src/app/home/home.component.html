@@ -1,0 +1,17 @@
+<div class="contaner mt-5">
+    <div *ngIf="!registerMode">
+      <div>
+        <h1>Find your match</h1>
+        <p class="lead">test..</p>
+      </div>
+      <div>
+        <a (click)="registerToggle()">Register</a><br>
+        <a>learn more</a>
+      </div>
+    </div>
+</div>
+<br><br><br>
+<div class="contaner" *ngIf="registerMode" >
+  <p>Register From goes here</p>
+  <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+</div>

@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 
 namespace API.Entities
 {
-    public class Appuser
+    public class AppUser
     {
        public int Id {get; set;}
-       public string? UserName {get; set;} 
-       
+       public string UserName {get; set;} = string.Empty;
+
+       public byte[] PasswordHash {get; set;} = default!;
+
+       public byte[] PasswordSalt {get; set;} = default!;
+      
     }
 }
